@@ -1,10 +1,6 @@
-# Codepath-ios-development-Prework
-Tip calculator app
+# Pre-work - *TipHer*
 
-
-# Pre-work - *Name of App Here*
-
-**Name of your app** is a tip calculator application for iOS.
+**TipHer** is a tip calculator application for iOS.
 
 Submitted by: **Emarah Charles**
 
