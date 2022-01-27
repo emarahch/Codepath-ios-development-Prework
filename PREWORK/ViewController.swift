@@ -16,7 +16,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        billAmountTextField.becomeFirstResponder()   //keyboard appears auto
+        billAmountTextField.keyboardType = .decimalPad //Keyboard is always numberpad
+    
+        billAmountTextField.layer.cornerRadius = 15.0
+        
     }
     
     
@@ -37,7 +41,8 @@ class ViewController: UIViewController {
         //Changing tip and total amount
         tipAmountLabel.text = String(format: "$%.2f", tip)
         
-        totalLabel.text = String(format: "$%.2f", total)
+        
+        totalLabel.text = String(format: "%.2f", total)
 
 
     }
