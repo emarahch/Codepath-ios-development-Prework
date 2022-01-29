@@ -16,6 +16,7 @@
 		964E056B27A2008D002817FE /* PREWORKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E056A27A2008D002817FE /* PREWORKTests.swift */; };
 		964E057527A2008D002817FE /* PREWORKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E057427A2008D002817FE /* PREWORKUITests.swift */; };
 		964E057727A2008D002817FE /* PREWORKUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E057627A2008D002817FE /* PREWORKUITestsLaunchTests.swift */; };
+		9683347427A5C8EF00EE4C53 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683347327A5C8EF00EE4C53 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		964E057027A2008D002817FE /* PREWORKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PREWORKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		964E057427A2008D002817FE /* PREWORKUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PREWORKUITests.swift; sourceTree = "<group>"; };
 		964E057627A2008D002817FE /* PREWORKUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PREWORKUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9683347327A5C8EF00EE4C53 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = PREWORK/SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		964E054727A2008C002817FE = {
 			isa = PBXGroup;
 			children = (
+				9683347327A5C8EF00EE4C53 /* SettingsViewController.swift */,
 				964E055227A2008C002817FE /* PREWORK */,
 				964E056927A2008D002817FE /* PREWORKTests */,
 				964E057327A2008D002817FE /* PREWORKUITests */,
@@ -261,6 +264,7 @@
 				964E055827A2008C002817FE /* ViewController.swift in Sources */,
 				964E055427A2008C002817FE /* AppDelegate.swift in Sources */,
 				964E055627A2008C002817FE /* SceneDelegate.swift in Sources */,
+				9683347427A5C8EF00EE4C53 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
