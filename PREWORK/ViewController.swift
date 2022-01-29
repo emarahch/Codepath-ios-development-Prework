@@ -39,16 +39,7 @@ class ViewController: UIViewController {
         print("view did appear")
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("view will disappear")
-    }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("view did disappear")
-    }
-    
+   
     
     @IBAction func calculateTip(_ sender: Any) {
    

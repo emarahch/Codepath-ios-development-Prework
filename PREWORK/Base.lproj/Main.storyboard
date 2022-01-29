@@ -75,15 +75,18 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="MaS-bX-zp0">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="BZv-IY-25u">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="CjB-Go-McV">
+                        <barButtonItem key="rightBarButtonItem" id="Thz-zN-U9W">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Dsi-oo-T69">
                                 <rect key="frame" x="307" y="5" width="87" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Settings"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Settings"/>
+                                <connections>
+                                    <segue destination="nRV-5d-OG1" kind="show" id="THa-cP-3n2"/>
+                                </connections>
                             </button>
                             <connections>
-                                <segue destination="nRV-5d-OG1" kind="show" id="CYE-7S-IUZ"/>
+                                <segue destination="nRV-5d-OG1" kind="show" id="cfh-cK-3ll"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -122,15 +125,21 @@
                                 <rect key="frame" x="239" y="433" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="83F-FY-1PU">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="83F-FY-1PU">
                                 <rect key="frame" x="239" y="433" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="DMode:" destination="nRV-5d-OG1" eventType="valueChanged" id="bYH-EX-Ckl"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YSU-jn-zYC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="nh3-J1-0Wi"/>
+                    <connections>
+                        <outlet property="DarkModeSwitch" destination="83F-FY-1PU" id="ybi-HW-yTM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xCr-c2-EmK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,6 +164,9 @@
             <point key="canvasLocation" x="28.985507246376812" y="73.660714285714278"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="THa-cP-3n2"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
