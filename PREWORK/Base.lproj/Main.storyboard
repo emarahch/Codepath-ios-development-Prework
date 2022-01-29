@@ -73,19 +73,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="MaS-bX-zp0">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="1OS-vL-IA6">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="9U7-eo-ebJ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="BZv-IY-25u">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="CjB-Go-McV">
                                 <rect key="frame" x="307" y="5" width="87" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Settings"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Settings"/>
                             </button>
                             <connections>
-                                <segue destination="nRV-5d-OG1" kind="show" id="aFN-c0-8xl"/>
+                                <segue destination="nRV-5d-OG1" kind="show" id="CYE-7S-IUZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="billAmountTextField" destination="7J3-ZT-PYO" id="Vrh-qa-xhe"/>
                         <outlet property="tipAmountLabel" destination="nvJ-xM-G6j" id="4va-OK-xGk"/>
@@ -124,18 +126,11 @@
                                 <rect key="frame" x="239" y="433" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xCt-RG-ded">
-                                <rect key="frame" x="239" y="433" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YSU-jn-zYC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="nh3-J1-0Wi"/>
-                    <connections>
-                        <outlet property="DarkModeSwitch" destination="xCt-RG-ded" id="h1Y-Ev-8Te"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xCr-c2-EmK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

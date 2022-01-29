@@ -19,7 +19,9 @@ class ViewController: UIViewController {
         self.title = "Tip Calculator"
         billAmountTextField.becomeFirstResponder()   //keyboard appears auto
         billAmountTextField.keyboardType = .decimalPad //Keyboard is always numberpad
-    
+        
+        let pink = UIColor (red: 0.9686, green: 0.8902, blue: 0.9255, alpha: 1)
+        view.backgroundColor = pink
         billAmountTextField.layer.cornerRadius = 15.0
         
     }

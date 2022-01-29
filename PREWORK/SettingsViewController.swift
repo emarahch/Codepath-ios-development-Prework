@@ -10,10 +10,22 @@ import UIKit
 class SettingsViewController: UIViewController {
     @IBOutlet weak var DarkModeSwitch: UISwitch!
     
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func DMode(_ sender: UISwitch) {
+        if sender.isOn{
+            overrideUserInterfaceStyle = .dark
+            
+        }
+        else{
+     }
     }
     
 
