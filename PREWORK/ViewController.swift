@@ -55,7 +55,7 @@ class ViewController: UIViewController {
 
    
     
-    @IBAction func calculateTip(_ sender: Any) {
+    @IBAction func calculateTip(_ sender: Any)  {
    
         //Get bill from input
         let bill = Double(billAmountTextField.text!) ?? 0
@@ -67,15 +67,21 @@ class ViewController: UIViewController {
         tipPercentages[tipControl.selectedSegmentIndex]
         
         let total = bill + tip
+      
         
         
         //Changing tip and total amount
         tipAmountLabel.text = String(format: "$%.2f", tip)
-        
-        
-        totalLabel.text = String(format: "%.2f", total)
+        //totalLabel.text = String(format: "%.2f", total)
 
-
+        let formatter = NumberFormatter()
+        formatter.usesGroupingSeparator = true
+        formatter.numberStyle = .currency
+        formatter.locale = NSLocale.current
+        
+        tipAmountLabel.text = formatter.string(for: tip)
+        totalLabel.text = formatter.string(for: total)
+        
     }
     
 
