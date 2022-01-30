@@ -56,7 +56,9 @@ class ViewController: UIViewController {
    
     
     @IBAction func calculateTip(_ sender: Any)  {
-   
+//        let defaults = UserDefaults.standard
+//        let CurrencyPicked = defaults.array(forKey: "CurrencyPicked")
+        
         //Get bill from input
         let bill = Double(billAmountTextField.text!) ?? 0
         
@@ -69,18 +71,54 @@ class ViewController: UIViewController {
         let total = bill + tip
       
         
+       
         
         //Changing tip and total amount
-        tipAmountLabel.text = String(format: "$%.2f", tip)
+        //tipAmountLabel.text = String(format: "$%.2f", tip)
         //totalLabel.text = String(format: "%.2f", total)
+        
+        
+        
+//        if CurrencyPicked == 0{
+//            //us locale
+//            let formatter = NumberFormatter()
+//            formatter.usesGroupingSeparator = true
+//            formatter.numberStyle = .currency
+//            formatter.locale = NSLocale.current
+//        }
+//        case 1:
+//            //euro
+//            let formatter = NumberFormatter()
+//            formatter.usesGroupingSeparator = true
+//            formatter.numberStyle = .currency
+//            formatter.locale = Locale(identifier: "fr_FR")
+//        case 2:
+//            //japan
+//            let formatter = NumberFormatter()
+//            formatter.usesGroupingSeparator = true
+//            formatter.numberStyle = .currency
+//            formatter.locale = NSLocale.current
+//        case 3:
+//            //British
+//            let formatter = NumberFormatter()
+//            formatter.usesGroupingSeparator = true
+//            formatter.numberStyle = .currency
+//            formatter.locale = NSLocale.current
+//        default:
+//            //beofre pick...locale
+//            let formatter = NumberFormatter()
+//            formatter.usesGroupingSeparator = true
+//            formatter.numberStyle = .currency
+//            formatter.locale = NSLocale.current
+//        }
 
         let formatter = NumberFormatter()
         formatter.usesGroupingSeparator = true
         formatter.numberStyle = .currency
         formatter.locale = NSLocale.current
         
-        tipAmountLabel.text = formatter.string(for: tip)
-        totalLabel.text = formatter.string(for: total)
+       tipAmountLabel.text = formatter.string(for: tip)
+      totalLabel.text = formatter.string(for: total)
         
     }
     

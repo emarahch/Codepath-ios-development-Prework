@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -133,24 +132,26 @@
                                     <action selector="DMode:" destination="nRV-5d-OG1" eventType="valueChanged" id="bYH-EX-Ckl"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ifp-2Z-84d">
-                                <rect key="frame" x="128" y="580" width="132" height="125"/>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qb8-QA-XbY">
+                                <rect key="frame" x="0.0" y="581" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Curreny Chosen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8P8-e5-zvG">
+                                <rect key="frame" x="149" y="751" width="226" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <menu key="menu" id="EZe-dD-D9V">
-                                    <children>
-                                        <command title="Item 1" id="1bl-OB-LIg"/>
-                                        <command title="Item 2" id="Dzb-dX-GEP"/>
-                                    </children>
-                                </menu>
-                                <state key="normal" title="Currenecy"/>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YSU-jn-zYC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="nh3-J1-0Wi"/>
                     <connections>
+                        <outlet property="CurrencyPicker" destination="qb8-QA-XbY" id="d1K-Lw-CVZ"/>
                         <outlet property="DarkModeSwitch" destination="83F-FY-1PU" id="ybi-HW-yTM"/>
+                        <outlet property="PickerLabel" destination="8P8-e5-zvG" id="Ld5-04-91b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xCr-c2-EmK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

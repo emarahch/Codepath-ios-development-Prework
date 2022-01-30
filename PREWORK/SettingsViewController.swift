@@ -7,10 +7,27 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return arrayCurrent.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return arrayCurrent[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.PickerLabel.text = arrayCurrent[row]
+    }
+    
+    var arrayCurrent = [String]()
     
     @IBOutlet weak var DarkModeSwitch: UISwitch!
     
+    @IBOutlet weak var CurrencyPicker: UIPickerView!
+    
+    @IBOutlet weak var PickerLabel: UILabel!
     
     
 //    let defaults = UserDefaults.standard
@@ -22,7 +39,25 @@ class SettingsViewController: UIViewController {
         
         let pink = UIColor (red: 0.9686, green: 0.8902, blue: 0.9255, alpha: 1)
         view.backgroundColor = pink        // Do any additional setup after loading the view.
+        
+        // Connect data:
+            
+              
+            self.CurrencyPicker.dataSource = self
+            self.CurrencyPicker.delegate = self
+              
+        
+              // Input the data into the array
+             arrayCurrent = ["US - USD", "European - EUR", "Japanese - JPY", "British - GBP"]
     }
+    
+    @IBAction func CurrentChange(_ sender: UIPickerView, didSelectRow row: Int){
+        let defaults = UserDefaults.standard
+        defaults.set(row, forKey: "CurrencyPicked")
+        defaults.synchronize()
+        
+        }
+    
     
     @IBAction func DMode(_ sender: UISwitch) {
         let defaults = UserDefaults.standard
