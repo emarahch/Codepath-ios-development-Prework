@@ -17,12 +17,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Tip Calculator"
+       
+
         billAmountTextField.becomeFirstResponder()   //keyboard appears auto
         billAmountTextField.keyboardType = .decimalPad //Keyboard is always numberpad
         
         let pink = UIColor (red: 0.9686, green: 0.8902, blue: 0.9255, alpha: 1)
         view.backgroundColor = pink
-        billAmountTextField.layer.cornerRadius = 15.0
+    
         
     }
     
@@ -30,14 +32,26 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("view will appear")
+        
+        let defaults = UserDefaults.standard
+        let darkModeSwitchInfo = defaults.bool(forKey: "darkModeSwitchInfo")
+
+       if darkModeSwitchInfo == true {
+              view.backgroundColor = .systemPink
+          }
+        if darkModeSwitchInfo == false{
+            let pink = UIColor (red: 0.9686, green: 0.8902, blue: 0.9255, alpha: 1)
+            view.backgroundColor = pink
+        }
         // This is a good place to retrieve the default tip percentage from UserDefaults
         // and use it to update the tip amount
+       // if{
+            
+        //}
+        defaults.synchronize()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("view did appear")
-    }
+    
 
    
     

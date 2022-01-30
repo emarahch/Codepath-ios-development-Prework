@@ -12,7 +12,11 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var DarkModeSwitch: UISwitch!
     
     
-
+    
+//    let defaults = UserDefaults.standard
+//    //let darkModeSwitchInfo = "darkModeSwitchInfo"
+//    var darkModeSwitchInfo = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,16 +25,27 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func DMode(_ sender: UISwitch) {
-        if DarkModeSwitch.isOn == true {
+        let defaults = UserDefaults.standard
+        
+        //set
+        defaults.set(DarkModeSwitch.isOn, forKey : "darkModeSwitchInfo")
+        
+        //call
+        let DarkModeSwitchIsOn = defaults.bool(forKey: "darkModeSwitchInfo")
+        DarkModeSwitch.isOn = DarkModeSwitchIsOn
+             
+        if DarkModeSwitchIsOn == true {
             view.backgroundColor = .systemPink
             //overrideUserInterfaceStyle = .dark
             
     }
-        else{
+        if DarkModeSwitchIsOn == false{
             let pink = UIColor (red: 0.9686, green: 0.8902, blue: 0.9255, alpha: 1)
             view.backgroundColor = pink
             
         }
+        defaults.synchronize()
+        
     }
     
 
