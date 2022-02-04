@@ -24,15 +24,15 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [X] List anything else that you can get done to improve the app functionality!
-- [X]Pink "Dark Mode"
-- [X]Settings page
-- [X]Currency picker (not fully functional)
+- [X] Pink "Dark Mode"
+- [X] Settings page
+- [X] Currency picker (not fully functional)
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://imgur.com/7fvszqh' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/vv5xS67hDDtYuJHcFf/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
